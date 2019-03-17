@@ -96,12 +96,18 @@ i {
   width: 10px;
   height: 10px;
   background: #35495e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 .incomplete-box {
   display: inline-block;
   width: 10px;
   height: 10px;
   background: #41b883;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .is-complete {
