@@ -11,19 +11,19 @@ const getters = {
 const actions = {
   async fetchTodos({ commit }) {
     const response = await axios.get(
-      "http://jsonplaceholder.typicode.com/todos"
+      "https://jsonplaceholder.typicode.com/todos"
     );
     commit("setTodos", response.data);
   },
   async addTodo({ commit }, title) {
     const response = await axios.post(
-      "http://jsonplaceholder.typicode.com/todos",
+      "https://jsonplaceholder.typicode.com/todos",
       { title, completed: false }
     );
     commit("newTodo", response.data);
   },
   async deleteTodo({ commit }, id) {
-    await axios.delete(`http://jsonplaceholder.typicode.com/todos/${id}`);
+    await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
     commit("removeTodo", id);
   },
   async filterTodos({ commit }, e) {
@@ -33,13 +33,13 @@ const actions = {
     );
 
     const response = await axios.get(
-      `http://jsonplaceholder.typicode.com/todos?_limit=${limit}`
+      `https://jsonplaceholder.typicode.com/todos?_limit=${limit}`
     );
     commit("setTodos", response.data);
   },
   async updateTodos({ commit }, updTodo) {
     const response = await axios.put(
-      `http://jsonplaceholder.typicode.com/todos/${updTodo.id}`,
+      `https://jsonplaceholder.typicode.com/todos/${updTodo.id}`,
       updTodo
     );
     console.log(response.data);
